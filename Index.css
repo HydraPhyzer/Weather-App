@@ -1,0 +1,96 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+.Main
+{
+    padding: 20px;
+    /* height: 100vh; */
+    width: 100%;
+    overflow: hidden;
+    background: url('/Images/Day1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Main .Top
+{
+    display: flex;
+    justify-content: space-between;
+}
+:where(.Left > div, .Right > div , input)
+{
+    padding: 10px;
+}
+.Right , .Left , .Day
+{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    height: fit-content;
+}
+.Right h3 , .Left
+{
+    color: white;
+}
+.Bottom
+{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    flex-direction: column;
+    width: 100%;
+}
+.Hourly-Data
+{
+    display: grid;
+    grid-template-columns: repeat(7 , 1fr);
+    grid-gap: 10px;
+}
+.Day
+{
+    width: fit-content;
+    padding: 10px 20px ;
+    color: white;
+    background-color: black;
+}
+.Hours 
+{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+.Time
+{
+    padding: 10px;
+}
+.Hours .Temp
+{
+    padding: 30px 0px;
+}
+img
+{
+    height: 30px;
+    width: 30px;
+    padding: 3px 0px;
+}
+input
+{
+    height:fit-content;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+input:focus
+{
+    outline: none;
+}
