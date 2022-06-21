@@ -37,7 +37,7 @@ let Weather =()=>
             Query='Lahore';
         }
         document.querySelector('.Hourly-Data').style.display='grid';
-        let Link=`http://api.weatherapi.com/v1/forecast.json?key=e3e5a6e2101943eb83550323222106&q=${Query}&aqi=no`;
+        let Link=`https://api.weatherapi.com/v1/forecast.json?key=e3e5a6e2101943eb83550323222106&q=${Query}&aqi=no`;
 
         if(Query.length!=0)
         {
