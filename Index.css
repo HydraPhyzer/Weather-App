@@ -196,10 +196,6 @@ input
         padding: 10px 20px;
         width: 100%;
     }
-}
-
-@media (max-width:310px)
-{
     .Center .Type
     {
         position: relative;
