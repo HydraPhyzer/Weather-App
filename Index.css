@@ -8,7 +8,8 @@
 .Main
 {
     padding: 20px;
-    /* height: 100vh; */
+    min-height: 100vh;
+    max-height: fit-content;
     width: 100%;
     overflow: hidden;
     background: url('/Images/Day1.jpg');
@@ -79,11 +80,10 @@
 }
 img
 {
-    height: 30px;
     width: 30px;
     padding: 3px 0px;
 }
-input
+input , .Btn
 {
     height:fit-content;
     border: none;
@@ -93,4 +93,124 @@ input
 input:focus
 {
     outline: none;
+}
+input
+{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.Btn
+{
+    outline: none;
+    border: none;
+    color: white;
+    background-color: #6EA6BF;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.Hours:hover
+{
+    transform: translateY(-15px);
+    transition: all 0.5s ease;
+}
+.Hourly-Data
+{
+    display: none;
+}
+@media (max-width:800px)
+{
+    .Main .Top
+    {
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .Top >div
+    {
+        margin: 10px auto;
+    }
+    .Center
+    {
+        order: 1;
+        grid-column: 1/-1;   
+        margin: auto;
+    }
+    .Left
+    {
+        order: 2;
+        grid-column: 1/2;
+        width: 90%;
+    }
+    .Right
+    {
+        order: 3;
+        grid-column: 2/3;
+        width: 90%;
+    }
+    .Hourly-Data h2 , .Day 
+    {
+        font-size: smaller;
+    }
+    .Hours .Temp
+    {
+        padding: 10px;
+    }
+    .Day
+    {
+        align-self: center;
+    }
+}
+@media (max-width:450px)
+{
+    .Main .Top
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .Top >div
+    {
+        margin: 10px auto;
+    }
+    .Center
+    {
+        order: 1;
+        grid-column: 1/-1;   
+        margin: auto;
+    }
+    .Left
+    {
+        order: 2;
+        grid-column: 1/-1;
+        width: 100%;
+    }
+    .Right
+    {
+        order: 3;
+        grid-column: 1/-1;
+        width: 100%;
+    }
+    .Hourly-Data
+    {
+        overflow-x: scroll;
+    }
+    .Hours .Temp
+    {
+        padding: 10px 20px;
+        width: 100%;
+    }
+}
+
+@media (max-width:306px)
+{
+    .Center .Type
+    {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin: 5px auto;
+        border-radius: 5px;
+    }
+}
+
+.Left , .Right , .Day
+{
+    visibility: hidden;
 }
